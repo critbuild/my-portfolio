@@ -1,0 +1,15 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  number: string;
+  label: string;
+}
+
+const { number, label } = Astro.props;
+---
+<div class="section-kicker" data-reveal-frame>
+  <span class="eyebrow"><span class="section-number">{number} /</span> {label}</span>
+  <span class="section-rule" data-reveal="rule"></span>
+  <Icon name="spark" />
+</div>

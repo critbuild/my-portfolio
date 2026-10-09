@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-labelledby="pf-t pf-d">
+<title id="pf-t">Portfolio — ring horizon</title>
+<desc id="pf-d">A vivid orange ring rests on a white horizon line, its lower edge hidden behind monochrome mountain ridges. Sharp white corner brackets frame the black scene.</desc>
+<defs>
+<linearGradient id="pf-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#181818"/><stop offset="1" stop-color="#080808"/></linearGradient>
+<linearGradient id="pf-g0" gradientUnits="userSpaceOnUse" x1="0" y1="420" x2="0" y2="580"><stop offset="0" stop-color="#525252"/><stop offset="1" stop-color="#414141"/></linearGradient>
+<linearGradient id="pf-g1" gradientUnits="userSpaceOnUse" x1="0" y1="504" x2="0" y2="640"><stop offset="0" stop-color="#242424"/><stop offset="1" stop-color="#303030"/></linearGradient>
+<path id="pf-r0" d="M-4 664V480L30 470 56 474 80 458 104 462 126 448 150 442 170 450 192 436 214 442 236 428 258 436 282 424 306 432 330 420 356 428 380 440 408 436 436 450 466 452 496 440 530 446 566 456 604 460 640 470 680 474 724 484 770 488 800 476 826 468 850 478 880 462 904 468 930 456 960 462 1004 452V664Z"/>
+<path id="pf-r1" d="M-4 664V540L24 528 48 532 70 518 94 522 116 508 140 514 166 504 190 512 216 506 244 518 270 514 300 526 330 530 360 540 396 546 430 556 470 560 510 566 550 562 590 570 630 566 670 572 710 568 740 560 764 552 786 544 802 534 816 528 830 538 850 544 874 536 900 546 930 540 960 548 1004 544V664Z"/>
+</defs>
+<rect width="1000" height="660" fill="url(#pf-bg)"/>
+<g fill="none" stroke-width="2.2">
+<path d="M40 60V40h20M940 40h20v20M960 600v20h-20M60 620H40v-20" stroke="#ffffff" stroke-opacity=".4"/>
+<path d="M80 72h64M80 84h36" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="912" cy="78" r="4" stroke="#ff5a1f"/>
+<path d="M70 330h860M120 327v6M170 327v6M220 327v6M270 327v6M320 327v6M680 327v6M730 327v6M780 327v6M830 327v6M880 327v6" stroke="#ffffff" stroke-opacity=".24"/>
+<circle cx="500" cy="330" r="140" stroke="#ffffff" stroke-opacity=".18"/>
+<circle cx="500" cy="330" r="150" stroke="#ff5a1f" stroke-width="3"/>
+<path d="M364.1 266.6A150 150 0 0 1 425 200.1" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</g>
+<use href="#pf-r0" fill="url(#pf-g0)"/>
+<use href="#pf-r0" transform="translate(0 10)" fill="none" stroke="#ffffff" stroke-opacity=".2"/>
+<use href="#pf-r1" fill="url(#pf-g1)"/>
+<use href="#pf-r1" transform="translate(0 12)" fill="none" stroke="#ffffff" stroke-opacity=".2" stroke-dasharray="3 5"/>
+<path fill="#080808" d="M-4 664V606L30 598 60 602 90 592 120 596 150 588 184 592 220 584 260 590 300 598 340 602 380 610 420 614 470 620 520 624 570 622 620 628 670 624 720 630 770 626 820 618 860 612 900 616 940 608 1004 604V664Z"/>
+</svg>

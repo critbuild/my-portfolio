@@ -1,0 +1,357 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { profile, projects, type Project } from '../../data/portfolio';
+
+export const getStaticPaths = (() =>
+  projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: {
+      project,
+      nextProject: projects[(index + 1) % projects.length],
+    },
+  }))) satisfies GetStaticPaths;
+
+interface Props {
+  project: Project;
+  nextProject: Project;
+}
+
+const { project, nextProject } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={`${project.title} — ${profile.name}`} description={project.summary}>
+  <article class="project-page container" aria-labelledby="project-title">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={`${base}#work`}><span aria-hidden="true">↖</span> Selected work</a>
+      <span class="breadcrumb-divider" aria-hidden="true">/</span>
+      <span aria-current="page">{project.title}</span>
+    </nav>
+
+    <header class="project-heading">
+      <div class="project-index eyebrow">
+        <span>Project {project.number} / {String(projects.length).padStart(2, '0')}</span>
+        <span>{project.category}</span>
+      </div>
+      <h1 id="project-title" data-reveal-frame><span class="title-line"><span data-reveal="title">{project.title}<span class="title-dot" aria-hidden="true">.</span></span></span></h1>
+      <p class="project-summary">{project.summary}</p>
+    </header>
+
+    <figure class="project-art">
+      <div class="project-art-frame" data-reveal-frame data-reveal-surface>
+        <img
+          src={`${base}${project.art.slice(1)}`}
+          alt={`Original conceptual illustration for ${project.title}, in orange, black, and white.`}
+          width="1000"
+          height="660"
+          decoding="async"
+          fetchpriority="high"
+          data-reveal="media"
+        />
+      </div>
+      <figcaption>
+        <span>{project.number} / {project.title}</span>
+        <span>Original project illustration · Not a product screenshot</span>
+      </figcaption>
+    </figure>
+
+    <section class="project-overview" aria-labelledby="overview-title">
+      <div class="section-label">
+        <p class="eyebrow">The overview</p>
+        <h2 id="overview-title" data-reveal-frame><span class="title-line"><span data-reveal="title">A closer look.</span></span></h2>
+      </div>
+      <div class="overview-content">
+        <p class="overview-copy">{project.overview}</p>
+        <div class="stack">
+          <h3 class="eyebrow">Built with</h3>
+          <ul class="stack-list" aria-label={`${project.title} technology stack`}>
+            {project.stack.map((technology) => <li class="tag">{technology}</li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-notes" aria-labelledby="notes-title">
+      <div class="notes-heading">
+        <p class="eyebrow">Architecture & interaction</p>
+        <h2 id="notes-title" data-reveal-frame><span class="title-line"><span data-reveal="title">Under the surface.</span></span></h2>
+      </div>
+      <ol class="notes-list">
+        {project.features.map((feature, index) => (
+          <li>
+            <span class="note-number" aria-hidden="true">0{index + 1}</span>
+            <h3>{feature.title}</h3>
+            <p>{feature.text}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <nav class="project-navigation" aria-label="Project navigation">
+      <a class="next-project" href={`${base}projects/${nextProject.slug}/`}>
+        <span class="next-label eyebrow">Next project / {nextProject.number}</span>
+        <span class="next-title">{nextProject.title}<span class="next-arrow" aria-hidden="true">↗</span></span>
+        <span class="next-category">{nextProject.category}</span>
+      </a>
+      <a class="back-link" href={`${base}#work`}><span aria-hidden="true">←</span> Back to selected work</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .project-page {
+    padding-top: clamp(2.5rem, 7vw, 6rem);
+    padding-bottom: clamp(4rem, 8vw, 8rem);
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .breadcrumb a,
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover,
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .breadcrumb-divider {
+    color: var(--line);
+  }
+
+  .project-heading {
+    padding: clamp(3.5rem, 8vw, 7.5rem) 0 clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .project-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 1.2rem 0 1.5rem;
+    font-size: clamp(4.5rem, 15vw, 12.5rem);
+    line-height: 0.98;
+    font-weight: 700;
+    letter-spacing: -0.075em;
+    overflow-wrap: anywhere;
+  }
+
+  .title-dot {
+    color: var(--accent);
+  }
+
+  .project-summary {
+    max-width: 39rem;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  .project-art {
+    margin: 0;
+  }
+
+  .project-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+
+  figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.035em;
+    line-height: 1.6;
+  }
+
+  .project-overview {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr;
+    gap: 3rem;
+    padding: clamp(4rem, 9vw, 8rem) 0;
+  }
+
+  .section-label .eyebrow,
+  .notes-heading .eyebrow {
+    margin: 0 0 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+  }
+
+  .overview-copy {
+    margin: 0;
+    color: var(--paper);
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    line-height: 1.8;
+    text-wrap: pretty;
+  }
+
+  .stack {
+    margin-top: 2.75rem;
+  }
+
+  .stack h3 {
+    margin: 0 0 1rem;
+    font-weight: 400;
+  }
+
+  .stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .project-notes {
+    border-top: 1px solid var(--line);
+    padding-top: 2.5rem;
+  }
+
+  .notes-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .notes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .notes-list li {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 1.5rem;
+    padding: 2.2rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .note-number {
+    padding-top: 0.3rem;
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .notes-list h3 {
+    max-width: 19rem;
+    margin: 0;
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+
+  .notes-list p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .project-navigation {
+    margin-top: clamp(3rem, 8vw, 7rem);
+    border-top: 1px solid var(--line);
+  }
+
+  .next-project {
+    display: block;
+    padding: clamp(2.5rem, 6vw, 5rem) 0;
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .next-label {
+    display: block;
+  }
+
+  .next-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: clamp(3.25rem, 9vw, 7rem);
+    line-height: 1.1;
+    letter-spacing: -0.065em;
+    overflow-wrap: anywhere;
+  }
+
+  .next-arrow {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 0.65em;
+  }
+
+  .next-category {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .next-project:hover .next-title {
+    color: var(--accent);
+  }
+
+  .back-link {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .project-page a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 6px;
+  }
+
+  @media (max-width: 720px) {
+    .project-overview {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .notes-list li {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .notes-list h3 {
+      max-width: none;
+    }
+
+    .notes-list p {
+      grid-column: 2;
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { profile } from '../data/portfolio';
+
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title={`Page not found — ${profile.name}`} description={`This trail ends here. Return to ${profile.name}’s selected work.`}>
+  <section class="lost-page container">
+    <p class="eyebrow">404 / OFF THE MAP</p>
+    <h1>A different<br /><span class="accent-text">direction.</span></h1>
+    <p>This page doesn’t exist. The work is back this way.</p>
+    <a class="button button--primary" href={`${base}#work`}>Return to selected work <Icon name="arrow-right" /></a>
+  </section>
+</BaseLayout>
+<style>
+  .lost-page { padding-block: clamp(90px, 14vw, 180px); }
+  .lost-page > .eyebrow { color: var(--accent); }
+  h1 { margin: 25px 0; font-size: clamp(48px, 8vw, 96px); font-weight: 700; letter-spacing: -.04em; line-height: 1.15; }
+  .lost-page > p:not(.eyebrow) { color: var(--muted); font-size: 14px; }
+  .button { margin-top: 35px; }
+</style>

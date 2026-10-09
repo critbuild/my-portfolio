@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="mt-t mt-d">
+<title id="mt-t">Mountain shadow panorama</title>
+<desc id="mt-d">High-contrast monochrome mountain ridges beneath a black sky. Low distant ridges recede on the left while a tall jagged peak rises at the right, its sharp edge traced in vivid orange.</desc>
+<defs>
+<linearGradient id="mt-haze" gradientUnits="userSpaceOnUse" x1="0" y1="420" x2="0" y2="720"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".05"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="mt-gp" gradientUnits="userSpaceOnUse" x1="0" y1="326" x2="0" y2="700"><stop offset="0" stop-color="#515151"/><stop offset="1" stop-color="#252525"/></linearGradient>
+<linearGradient id="mt-g0" gradientUnits="userSpaceOnUse" x1="0" y1="488" x2="0" y2="700"><stop offset="0" stop-color="#363636"/><stop offset="1" stop-color="#414141"/></linearGradient>
+<linearGradient id="mt-g1" gradientUnits="userSpaceOnUse" x1="0" y1="548" x2="0" y2="720"><stop offset="0" stop-color="#242424"/><stop offset="1" stop-color="#303030"/></linearGradient>
+<linearGradient id="mt-g2" gradientUnits="userSpaceOnUse" x1="0" y1="586" x2="0" y2="1000"><stop offset="0" stop-color="#101010"/><stop offset=".45" stop-color="#080808"/><stop offset="1" stop-color="#080808" stop-opacity="0"/></linearGradient>
+<linearGradient id="mt-gl"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<path id="mt-pk" d="M1130 740V700L1160 684 1190 668 1216 654 1236 646 1252 628 1266 620 1282 600 1296 594 1308 572 1322 566 1332 542 1348 536 1354 512 1366 504 1374 478 1388 470 1394 446 1404 440 1408 412 1418 402 1422 372 1430 358 1436 326 1442 338 1448 362 1456 366 1458 392 1468 396 1472 424 1480 432 1484 456 1494 440 1502 448 1508 474 1518 484 1524 508 1536 516 1544 540 1558 548 1570 566 1586 576 1604 592V740Z"/>
+<path id="mt-r0" d="M-4 740V592L18 584 36 586 58 572 76 574 96 560 112 562 130 548 150 542 166 546 184 534 200 528 216 532 232 518 248 512 262 516 278 502 296 494 310 488 322 494 338 500 352 508 370 506 388 516 404 522 420 520 438 530 456 536 474 534 494 540 516 540 536 534 556 530 572 534 592 542 612 548 634 554 656 560 680 566 706 574 734 578 766 584 800 592 836 596 876 606 920 612 970 620 1030 628 1100 640 1170 652 1250 670 1340 696 1604 730V740Z"/>
+<path id="mt-r1" d="M-4 740V618L16 608 34 612 52 596 70 590 88 578 104 572 120 568 136 560 150 556 162 562 176 564 190 562 206 572 222 578 240 586 258 584 276 594 296 600 318 598 340 604 362 598 384 592 404 590 420 586 438 592 458 600 482 604 508 612 536 618 566 622 598 630 632 634 668 640 706 646 746 650 790 656 836 660 884 664 934 666 990 668 1050 670 1120 674 1200 676 1300 690 1604 720V740Z"/>
+</defs>
+<rect y="420" width="1600" height="300" fill="url(#mt-haze)"/>
+<path id="mt-far" fill="#626262" d="M-4 740V556L20 548 44 538 60 540 84 526 106 518 122 522 142 508 160 500 176 504 196 492 214 486 228 490 246 480 266 474 284 478 300 470 318 466 336 470 356 478 374 476 392 484 414 490 432 486 452 494 474 502 496 498 520 502 544 508 570 506 596 514 624 528 652 526 680 534 710 540 740 536 772 544 806 540 842 530 880 524 910 530 940 526 964 536 990 532 1010 540 1040 548 1070 560 1110 576 1170 596 1240 612 1320 640 1420 690 1604 736V740Z"/>
+<g id="mt-peak">
+<use href="#mt-pk" fill="url(#mt-gp)"/>
+<use href="#mt-pk" transform="translate(12 14)" fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-dasharray="3 5"/>
+<path fill="none" stroke="#ff5a1f" stroke-width="2.5" stroke-linejoin="miter" d="M1322 566L1332 542 1348 536 1354 512 1366 504 1374 478 1388 470 1394 446 1404 440 1408 412 1418 402 1422 372 1430 358 1436 326"/>
+</g>
+<g id="mt-mid">
+<use href="#mt-r0" fill="url(#mt-g0)"/>
+<use href="#mt-r0" transform="translate(0 12)" fill="none" stroke="#ffffff" stroke-opacity=".16"/>
+<use href="#mt-r1" fill="url(#mt-g1)"/>
+<use href="#mt-r1" transform="translate(0 16)" fill="none" stroke="#ffffff" stroke-opacity=".2"/>
+<rect x="700" y="640" width="360" height="1" fill="url(#mt-gl)" opacity=".12"/>
+<rect x="560" y="676" width="560" height="1" fill="url(#mt-gl)" opacity=".2"/>
+<rect x="420" y="694" width="600" height="1" fill="url(#mt-gl)" opacity=".14"/>
+</g>
+<path id="mt-near" fill="url(#mt-g2)" d="M-4 1004V666L14 656 30 660 46 646 62 640 80 628 98 622 112 614 124 610 138 616 154 622 170 620 188 630 208 636 230 634 252 644 276 650 302 648 330 658 360 664 392 672 426 678 462 686 500 692 542 698 586 704 632 708 680 712 730 716 780 718 830 716 880 712 930 708 980 706 1030 708 1080 702 1130 696 1180 688 1220 682 1252 672 1272 662 1290 648 1306 638 1318 622 1328 610 1336 594 1344 586 1352 598 1362 606 1374 600 1386 614 1402 620 1418 616 1438 626 1462 622 1492 634 1522 630 1552 640 1582 636 1604 642V1004Z"/>
+</svg>

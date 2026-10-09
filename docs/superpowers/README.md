@@ -1,19 +1,10 @@
-# Documentation Index
+# Historical portfolio planning
 
-This directory contains the source-of-truth planning documents for the portfolio project.
+These documents describe the retired Next.js terminal-first portfolio. They are historical records, not the current architecture or an execution checklist.
 
-## Documents
+The implemented site now uses static Astro pages, original SVG mountain artwork, native CSS animation, and a small TypeScript enhancement script. See the [current documentation](../README.md) for architecture, source ownership, commands, and verification, or the [project README](../../README.md) for a quick start.
 
-- [Design spec](./specs/2026-03-11-portfolio-design.md)
-  Defines the product goals, routes, terminal interactions, data model, architecture, and out-of-scope decisions.
-- [Implementation plan](./plans/2026-03-11-portfolio.md)
-  Breaks the build into ordered chunks covering setup, data, terminal logic, UI, pages, and deployment.
+## Archived documents
 
-## Recommended Reading Order
-
-1. Read the design spec first.
-2. Use the implementation plan as the execution checklist.
-
-## Current State
-
-As of March 11, 2026, the repository contains documentation only. The Next.js project described by these documents has not been scaffolded yet.
+- [Original terminal design](./specs/2026-03-11-portfolio-design.md)
+- [Original implementation plan](./plans/2026-03-11-portfolio.md)

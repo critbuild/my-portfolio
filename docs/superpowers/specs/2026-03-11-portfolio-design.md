@@ -3,8 +3,8 @@
 [Back to repo README](../../../README.md) · [Documentation index](../README.md) · [Implementation plan](../plans/2026-03-11-portfolio.md)
 
 **Date:** 2026-03-11
-**Status:** Approved
-**Repository state:** Documentation only; implementation has not started
+**Status:** Historical — superseded by the static Astro portfolio.
+**Repository state:** The terminal implementation has been retired. See the [current README](../../../README.md) for architecture, content, and commands.
 
 ---
 

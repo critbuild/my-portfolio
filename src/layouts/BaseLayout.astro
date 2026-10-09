@@ -1,0 +1,78 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import manropeFont from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+import Icon from '../components/Icon.astro';
+import { profile } from '../data/portfolio';
+
+interface Props {
+  title: string;
+  description: string;
+  home?: boolean;
+}
+const { title, description, home = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const links = [
+  { id: 'work', number: '01', label: 'Work' },
+  { id: 'about', number: '02', label: 'About' },
+  { id: 'contact', number: '03', label: 'Contact' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#080808" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>{title}</title>
+    <link rel="preload" href={manropeFont} as="font" type="font/woff2" crossorigin="anonymous" />
+  </head>
+  <body class:list={[home ? 'page-home' : 'page-project']} id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="wordmark" href={base} aria-label={`${profile.name} home`}>
+          <svg class="brand-mark" width="29" height="35" viewBox="0 0 29 35" fill="none" aria-hidden="true">
+            <path d="M9 6H3v23h6M20 6h6v23h-6M18 10l-7 15" stroke="currentColor" stroke-width="2.2" />
+          </svg>
+          <span>{profile.name}<span class="wordmark-period">.</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          {links.map((link) => (
+            <a href={`${home ? '' : base}#${link.id}`} data-nav={link.id}>
+              <span class="nav-number">{link.number}</span>{link.label}
+            </a>
+          ))}
+        </nav>
+        <a class="header-contact" href={`${home ? '' : base}#contact`}>LET’S CONNECT <Icon /></a>
+        <details class="mobile-menu">
+          <summary aria-label="Navigation menu"><span>MENU</span><Icon name="menu" /></summary>
+          <nav aria-label="Mobile navigation">
+            {links.map((link) => <a href={`${home ? '' : base}#${link.id}`}><span>{link.number}</span>{link.label}<Icon /></a>)}
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer container">
+      <div class="footer-top">
+        <a class="footer-brand" href={base}>{profile.name}<span>.</span></a>
+        <p>A little less noise.<br />A little more intention.</p>
+        <a class="back-top" href="#top">BACK TO TOP <Icon name="arrow-up-right" /></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© {new Date().getFullYear()} {profile.name}</span>
+        <span class="footer-build"><span class="status-dot"></span> STATIC BY DESIGN. LIGHT BY NATURE.</span>
+        <a href={profile.github} target="_blank" rel="noopener noreferrer">GITHUB <Icon /></a>
+      </div>
+    </footer>
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>

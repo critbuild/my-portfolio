@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-labelledby="fy-t fy-d">
+<title id="fy-t">Fairy — orbital core</title>
+<desc id="fy-d">A vivid orange core ringed by sharp white and orange orbits on black. Three input lines converge into the core from the left and a single line leads out to a stacked memory mark on the right, framed by fine interface ticks and corner brackets.</desc>
+<defs>
+<linearGradient id="fy-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#181818"/><stop offset="1" stop-color="#080808"/></linearGradient>
+<radialGradient id="fy-glow" gradientUnits="userSpaceOnUse" cx="500" cy="310" r="230"><stop offset="0" stop-color="#ff5a1f" stop-opacity=".12"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1000" height="660" fill="url(#fy-bg)"/>
+<circle cx="500" cy="310" r="230" fill="url(#fy-glow)"/>
+<g fill="none" stroke-width="2.2">
+<path d="M40 60V40h20M940 40h20v20M960 600v20h-20M60 620H40v-20" stroke="#ffffff" stroke-opacity=".4"/>
+<path d="M80 72h64M80 84h36" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="912" cy="78" r="4" stroke="#ff5a1f"/>
+<path d="M80 572h840M140 569v6M200 569v6M260 569v6M320 569v6M380 569v6M440 569v6M560 569v6M620 569v6M680 569v6M740 569v6M800 569v6M860 569v6" stroke="#ffffff" stroke-opacity=".24"/>
+<path d="M500 565v14" stroke="#ff5a1f"/>
+<circle cx="500" cy="310" r="200" stroke="#ffffff" stroke-opacity=".14"/>
+<ellipse cx="500" cy="310" rx="270" ry="98" transform="rotate(-8 500 310)" stroke="#ffffff" stroke-opacity=".45" stroke-dasharray="1 7" stroke-linecap="round"/>
+<ellipse cx="500" cy="310" rx="190" ry="66" transform="rotate(12 500 310)" stroke="#ff5a1f"/>
+<ellipse cx="500" cy="310" rx="120" ry="42" transform="rotate(-20 500 310)" stroke="#ffffff" stroke-opacity=".85"/>
+<path d="M121 258h120l60 52h183M121 310h363M121 362h120l60-52M516 310h184" stroke="#ffffff" stroke-opacity=".45"/>
+<path d="M115 255h6v6h-6zM115 307h6v6h-6zM115 359h6v6h-6z" stroke="#ffffff" stroke-opacity=".8"/>
+<circle cx="500" cy="310" r="16" stroke="#ff5a1f"/>
+<path d="M500 286v-8M500 334v8M476 310h-8M524 310h8" stroke="#ffffff" stroke-opacity=".7"/>
+<g stroke="#ffffff" stroke-opacity=".6" fill="#080808"><rect x="700" y="296" width="64" height="7" rx="1.5"/><rect x="700" y="307" width="64" height="7" rx="1.5" fill="#ff5a1f"/><rect x="700" y="318" width="64" height="7" rx="1.5"/></g>
+</g>
+<circle cx="500" cy="310" r="5" fill="#ff5a1f"/>
+<circle cx="595.6" cy="303.9" r="3.5" fill="#ff5a1f"/>
+<circle cx="399.4" cy="321" r="2.5" fill="#ffffff"/>
+<circle cx="378.3" cy="236.5" r="3" fill="#ffffff"/>
+<circle cx="490.3" cy="410" r="2.5" fill="#ff5a1f"/>
+<circle cx="477" cy="214.3" r="1.5" fill="#ffffff"/>
+</svg>

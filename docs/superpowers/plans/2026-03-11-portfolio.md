@@ -2,9 +2,7 @@
 
 [Back to repo README](../../../README.md) · [Documentation index](../README.md) · [Design spec](../specs/2026-03-11-portfolio-design.md)
 
-> **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
-
-**Current repository state:** Documentation only. This plan has not been executed yet.
+> **Historical plan:** This describes the retired Next.js terminal design, not the current application. Do not execute it against the Astro portfolio. See the [current README](../../../README.md).
 
 **Goal:** Build a terminal-themed personal portfolio site with a fake interactive landing terminal, persistent terminal drawer, and static portfolio pages for projects, about, and contact.
 
