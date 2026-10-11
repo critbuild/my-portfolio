@@ -45,28 +45,28 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'qq',
-    title: 'qq',
+    slug: 'crit',
+    title: 'Crit',
     number: '02',
-    category: 'Composable agent toolkit',
+    category: 'Worktree-first terminal',
     summary:
-      'A Rust toolkit for running and orchestrating AI agents, with a terminal interface, workspace tools, and explicit action approvals.',
-    stack: ['Rust', 'TUI', 'MCP', 'RON'],
-    art: '/art/qq.svg',
+      'A worktree-first terminal for OMP and OpenCode: one Git branch per pane, an isolated Docker environment per worktree, and a natural-language launcher for the controls.',
+    stack: ['Rust', 'ratatui', 'Docker Compose', 'Kitty'],
+    art: '/art/crit.svg',
     overview:
-      'qq is a composable toolkit for building, running, and orchestrating AI agents. Its interactive terminal interface connects to a user-scoped background server. Agents can work with files, shell commands, and MCP tools, with approval policy making the boundary between a proposed action and execution explicit.',
+      'Crit runs coding agents inside Git worktrees instead of a single checkout. Tabs and splits map to branches, each worktree can bring up its own Compose stack on isolated loopback ports, and an F1 launcher turns plain requests into supported Crit actions. Agent sessions, workspace shells, and Kitty shortcuts stay inside one terminal.',
     features: [
       {
-        title: 'A terminal surface. A separate server.',
-        text: 'Launching qq without a subcommand opens the interactive TUI against a user-scoped background server. The server can also run in the foreground through qq serve, keeping the interface and agent service distinct.',
+        title: 'A branch is a pane.',
+        text: 'Splitting the terminal asks for a branch name and opens its worktree in the second pane, based on the focused checkout’s HEAD. Tabs open worktrees, other project folders, or already-open projects; Ctrl+D drops into an agent’s workspace shell without stopping it, and closing a tab never deletes its checkout.',
       },
       {
-        title: 'Actions cross an approval boundary.',
-        text: 'Read-only, ask, and auto modes define which tools may execute. Approval prompts expose the exact command or edit diff; session grants and allowlisted command prefixes make permission specific rather than implicit.',
+        title: 'Environments that do not collide.',
+        text: 'New worktrees start their Compose stack automatically when configured. Each gets its own project, networks, named volumes, build image, and dynamically allocated loopback host ports; external networks, external volumes, and host networking are refused. An optional crit.toml injects a sibling service’s URL into a container’s runtime environment.',
       },
       {
-        title: 'Tools share an event and policy flow.',
-        text: 'MCP tools join the same approval and event flow as built-in tools, under namespaced identifiers. Both stdio and streamable-HTTP transports are supported, with workspace declarations gated by trust.',
+        title: 'Natural language, bounded actions.',
+        text: 'F1 interprets a request through the authenticated OMP installation with no tools, extensions, or persistent session. Only supported Crit actions and known destinations can execute — never model-generated shell commands — and destructive actions still confirm. F2 exposes the same controls without a model.',
       },
     ],
   },

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-labelledby="crit-t crit-d">
+<title id="crit-t">Crit — a trunk, three worktrees, three isolated panes</title>
+<desc id="crit-d">A vertical commit line on the left branches into three parallel lanes. Each lane ends in its own terminal pane stacked on the right; the middle pane is active and brighter. Past a dashed boundary, each pane owns a small sealed container box with its own port tick, framed by fine interface ticks and corner brackets.</desc>
+<defs>
+<linearGradient id="crit-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#181818"/><stop offset="1" stop-color="#080808"/></linearGradient>
+</defs>
+<rect width="1000" height="660" fill="url(#crit-bg)"/>
+<g fill="none" stroke-width="2.2">
+<path d="M40 60V40h20M940 40h20v20M960 600v20h-20M60 620H40v-20" stroke="#ffffff" stroke-opacity=".4"/>
+<path d="M80 72h64M80 84h36" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="912" cy="78" r="4" stroke="#ff5a1f"/>
+<path d="M80 572h840M140 569v6M200 569v6M260 569v6M320 569v6M380 569v6M440 569v6M500 569v6M560 569v6M620 569v6M680 569v6M740 569v6M800 569v6M860 569v6" stroke="#ffffff" stroke-opacity=".24"/>
+<path d="M160 120V540" stroke="#ff5a1f" stroke-opacity=".85"/>
+<path d="M160 150v-30M160 540v-20" stroke="#ff5a1f" stroke-opacity=".35" stroke-dasharray="2 6" stroke-linecap="round"/>
+<path d="M160 200c60 0 60 10 120 10h60M160 340h180M160 480c60 0 60-10 120-10h60" stroke="#ffffff" stroke-opacity=".45"/>
+<g stroke="#ffffff" stroke-opacity=".85" fill="#080808"><circle cx="160" cy="200" r="6"/><circle cx="160" cy="480" r="6"/></g>
+<circle cx="160" cy="340" r="6" stroke="#ff5a1f" fill="#080808"/>
+<path d="M334 204h6v12h-6zM334 334h6v12h-6zM334 464h6v12h-6z" stroke="#ff5a1f"/>
+<rect x="340" y="150" width="430" height="120" rx="4" stroke="#ffffff" stroke-opacity=".4" fill="#080808"/>
+<rect x="340" y="280" width="430" height="120" rx="4" stroke="#ffffff" stroke-opacity=".85" fill="#080808"/>
+<rect x="340" y="410" width="430" height="120" rx="4" stroke="#ffffff" stroke-opacity=".4" fill="#080808"/>
+<path d="M340 176h430M340 306h430M340 436h430" stroke="#ffffff" stroke-opacity=".3"/>
+<path d="M360 246l7 6-7 6M360 376l7 6-7 6M360 506l7 6-7 6" stroke="#ff5a1f" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M786 130V550" stroke="#ff5a1f" stroke-opacity=".7" stroke-dasharray="2 6" stroke-linecap="round"/>
+<rect x="808" y="178" width="72" height="64" rx="3" stroke="#ffffff" stroke-opacity=".4"/>
+<rect x="808" y="308" width="72" height="64" rx="3" stroke="#ffffff" stroke-opacity=".85"/>
+<rect x="808" y="438" width="72" height="64" rx="3" stroke="#ffffff" stroke-opacity=".4"/>
+<path d="M808 200h72M808 330h72M808 460h72" stroke="#ffffff" stroke-opacity=".3"/>
+<path d="M880 210h24M880 340h24M880 470h24" stroke="#ffffff" stroke-opacity=".55"/>
+<path d="M770 210h38M770 340h38M770 470h38" stroke="#ffffff" stroke-opacity=".3"/>
+</g>
+<g fill="#ff5a1f"><rect x="352" y="160" width="36" height="5" rx="2.5" fill-opacity=".5"/><rect x="352" y="290" width="36" height="5" rx="2.5"/><rect x="352" y="420" width="36" height="5" rx="2.5" fill-opacity=".5"/><rect x="376" y="376" width="7" height="12"/></g>
+<g fill="#ffffff" fill-opacity=".3"><rect x="360" y="196" width="120" height="4" rx="2"/><rect x="360" y="214" width="200" height="4" rx="2"/><rect x="360" y="232" width="80" height="4" rx="2"/><rect x="360" y="456" width="140" height="4" rx="2"/><rect x="360" y="474" width="90" height="4" rx="2"/><rect x="360" y="492" width="180" height="4" rx="2"/></g>
+<g fill="#ffffff" fill-opacity=".55"><rect x="360" y="326" width="160" height="4" rx="2"/><rect x="360" y="344" width="240" height="4" rx="2"/><rect x="360" y="362" width="110" height="4" rx="2"/></g>
+<g fill="#ffffff" fill-opacity=".4"><rect x="820" y="212" width="48" height="4" rx="2"/><rect x="820" y="226" width="30" height="4" rx="2"/><rect x="820" y="472" width="48" height="4" rx="2"/><rect x="820" y="486" width="30" height="4" rx="2"/></g>
+<g fill="#ffffff" fill-opacity=".75"><rect x="820" y="342" width="48" height="4" rx="2"/><rect x="820" y="356" width="30" height="4" rx="2"/></g>
+<circle cx="904" cy="210" r="3" fill="#ffffff" fill-opacity=".5"/>
+<circle cx="904" cy="340" r="3" fill="#ff5a1f"/>
+<circle cx="904" cy="470" r="3" fill="#ffffff" fill-opacity=".5"/>
+</svg>

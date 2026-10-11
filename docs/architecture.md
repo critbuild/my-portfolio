@@ -33,7 +33,7 @@ Keep unique home sections together. Extract shared knowledge or repeated behavio
 - Identity and GitHub contact links come from `profile`. There is no pretend contact form or invented email, résumé, or social link.
 - Add or reorder projects in `projects`. Keep each `slug` unique, supply its artwork as a `/art/...` path, and maintain the intended `number` labels. Templates apply the deployment base to artwork URLs. Cards, static routes, totals, and next-project navigation share this collection; the total uses `projects.length`, padded to at least two digits.
 - About text remains editorial copy in `index.astro`, not verified employment history. Do not add personal facts or outcome metrics without supplied evidence.
-- Fairy and qq summaries were grounded in their sibling repositories' READMEs. Verify those sources when changing their claims; sibling repositories are content references, not runtime dependencies.
+- Fairy's summary was grounded in its sibling repository's README; Crit's in its sibling repository's `--help` text (`src/main.rs`) and `Cargo.toml`. Verify those sources when changing their claims; sibling repositories are content references, not runtime dependencies.
 
 ## Motion contract
 
